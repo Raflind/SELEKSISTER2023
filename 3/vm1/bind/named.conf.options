@@ -1,0 +1,14 @@
+acl "trusted" {
+	192.168.10.0/24;
+	localhost;
+	localnets;
+};
+
+options {
+	directory "/var/cache/bind";
+	
+	recursion yes;
+	allow-query { "trusted"; };
+	allow-transfer { none; };
+	listen-on { 192.168.10.1; };
+};

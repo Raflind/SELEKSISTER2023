@@ -1,0 +1,14 @@
+$TTL 604800
+
+@	IN 	SOA	ns.pandalism.net 	admin.pandalism.net. (
+
+			2			; Serial
+			604800			; Refresh
+			86400			; Retry
+			2419200			; Expire
+			604800)			; Negative Cache TTL
+
+@	IN	NS	ns.pandalism.net.
+ns	IN	A	192.168.10.1		; VM1 DNS + DHCP
+@	IN	A 	192.168.10.103		; Reverse Proxy
+www 	IN 	CNAME	@
